@@ -1,0 +1,84 @@
+.header {
+  padding: torem(26) 0 torem(23);
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(torem(36), 5vw, torem(84));
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    font-family: "Finlandica medium";
+    font-size: torem(25);
+    line-height: 1.14;
+  }
+
+  &__nav {
+    flex: 1;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: torem(10) clamp(torem(36), 5vw, torem(76));
+
+      li {
+        font-size: $sm;
+        line-height: 1.37;
+        color: $black;
+        letter-spacing: 0.2px;
+        transition: all 0.3s ease;
+
+        a {
+          font-size: $sm;
+          line-height: 1.37;
+          color: $black;
+          letter-spacing: 0.2px;
+          transition: all 0.3s ease;
+
+          &:hover,
+          &:active {
+            color: $secondaryColor;
+          }
+        }
+
+        &.active {
+          a {
+            color: $secondaryColor;
+          }
+        }
+
+        &.disabled {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    all: unset;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: torem(29);
+    height: torem(16);
+    cursor: pointer;
+
+    > span {
+      width: 100%;
+      height: torem(3);
+      background-color: $mainColor;
+      border-radius: 6px;
+    }
+  }
+
+  @include sm-breakpoint {
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: torem(20);
+    }
+  }
+}

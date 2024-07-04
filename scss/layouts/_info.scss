@@ -1,0 +1,151 @@
+.section {
+  &.info {
+    padding: torem(72) torem(62) torem(20);
+    background: radial-gradient(
+        151.35% 47.47% at 50% 56.37%,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #fff;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: torem(52);
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: torem(8);
+      }
+
+      h2 {
+        display: inline-block;
+        padding: torem(4) torem(5);
+        background: $green;
+        font-family: "Finlandica medium";
+        font-size: $xl;
+        font-weight: 500;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: $white;
+      }
+    }
+
+    .info {
+      &__content {
+        display: flex;
+        align-items: center;
+        gap: torem(68);
+
+        &__image {
+          flex: 0 1 30%;
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        &__text {
+          flex: 0 1 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: torem(25);
+
+          > p {
+            font-size: torem(24);
+            line-height: 1.16;
+
+            span {
+              font-family: "Open-sans bold";
+              text-decoration-line: underline;
+            }
+
+            &:last-of-type {
+              margin-top: torem(20);
+            }
+          }
+
+          h4 {
+            font-family: "Open-sans bold";
+            font-size: torem(20);
+            line-height: 1.25;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: torem(14);
+            padding-left: torem(36);
+            list-style-type: disc;
+
+            li {
+              font-size: torem(20);
+              line-height: 1.25;
+              list-style-type: initial;
+
+              &::marker {
+                font-size: torem(24);
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include sm-breakpoint {
+      padding: torem(40) 0 torem(30);
+
+      .wrapper {
+        flex-direction: column;
+        gap: torem(30);
+
+        h2 {
+          font-size: $xl;
+        }
+      }
+
+      .info {
+        &__content {
+          flex-direction: column;
+          gap: torem(40);
+
+          &__image {
+            flex: 0 1 30%;
+          }
+
+          &__text {
+            flex: 0 1 70%;
+
+            gap: torem(15);
+
+            > p {
+              font-size: $lg;
+            }
+
+            h4 {
+              font-size: $md;
+            }
+
+            ul {
+              gap: torem(10);
+              padding-left: torem(24);
+
+              li {
+                font-size: $lg;
+
+                &::marker {
+                  font-size: torem(18);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.footer {
+  padding: torem(36) 0 torem(48);
+  background: $black;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: torem(22);
+
+    @include sm-breakpoint {
+      flex-direction: column;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: torem(22);
+      font-size: $sm;
+      line-height: 1.37;
+      color: $white;
+
+      &:first-child {
+        max-width: torem(285);
+      }
+
+      &:nth-child(2) {
+        flex: 1;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-bottom: torem(20);
+
+        @include sm-breakpoint {
+          align-items: flex-start;
+          padding: 0;
+        }
+      }
+
+      &:last-child {
+        flex: 0 1 100%;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: torem(6);
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}

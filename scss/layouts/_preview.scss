@@ -1,0 +1,50 @@
+.preview {
+  .wrapper {
+    display: flex;
+    gap: torem(42);
+    padding-top: torem(66);
+    font-size: torem(20);
+    line-height: 1.25;
+    color: $black;
+
+    > * {
+      flex: 1;
+    }
+
+    h2 {
+      font-size: $xl;
+      line-height: 1.11;
+      color: $mainColor;
+      text-transform: uppercase;
+    }
+
+    @include sm-breakpoint {
+      flex-direction: column;
+      gap: torem(20);
+      padding-top: torem(40);
+      font-size: torem(16);
+
+      h2 {
+        font-size: $lg;
+      }
+    }
+  }
+
+  &.new {
+    .wrapper {
+      padding-top: torem(45);
+
+      > p {
+        flex: 0 1 60%;
+      }
+
+      @include sm-breakpoint {
+        padding-top: torem(30);
+
+        > p {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

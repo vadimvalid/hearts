@@ -1,0 +1,109 @@
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: torem(8);
+  padding: torem(13) torem(23);
+  border-radius: 42px;
+  background: $mainColor;
+  font-family: "Open-sans bold", sans-serif;
+  font-size: torem(13);
+  line-height: 1.37;
+  color: $white;
+  text-align: center;
+  cursor: pointer;
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &--secondary {
+    padding: torem(16) torem(27);
+    background: #f7a54c;
+    font-size: $md;
+    color: $white;
+
+    &--icon {
+      padding: torem(16) torem(52);
+
+      img {
+        width: torem(28);
+        height: torem(28);
+      }
+    }
+  }
+
+  &--white {
+    padding: torem(16) torem(27);
+    background: $white;
+    font-size: $md;
+    color: $mainColor;
+
+    &--icon {
+      padding-left: torem(14);
+
+      img {
+        width: torem(28);
+        height: torem(28);
+      }
+    }
+  }
+
+  &--red {
+    background: $red;
+    color: $white;
+    font-size: torem(24);
+  }
+
+  &--green {
+    background: $green;
+    color: $white;
+    font-size: torem(24);
+  }
+
+  &--small {
+    font-size: $md;
+  }
+
+  @include sm-breakpoint {
+    padding: torem(10) torem(16);
+
+    &--secondary {
+      padding: torem(10) torem(16);
+      font-size: $sm;
+
+      &--icon {
+        padding: torem(12) torem(40);
+
+        img {
+          width: torem(20);
+          height: torem(20);
+        }
+      }
+    }
+
+    &--white {
+      padding: torem(10) torem(16);
+      font-size: $sm;
+
+      &--icon {
+        padding-left: torem(10);
+
+        img {
+          width: torem(20);
+          height: torem(20);
+        }
+      }
+    }
+
+    &--red {
+      font-size: $lg;
+    }
+
+    &--small {
+      font-size: $sm;
+    }
+  }
+}

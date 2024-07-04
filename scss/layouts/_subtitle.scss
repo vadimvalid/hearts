@@ -1,0 +1,31 @@
+.section {
+  &.subtitle {
+    padding: torem(55) 0;
+    text-transform: uppercase;
+
+    h2 {
+      @include sectionTitle;
+    }
+
+    .wrapper {
+      width: 50%;
+      text-wrap: pretty;
+    }
+
+    &.creatine {
+      padding: torem(58) 0 torem(44);
+    }
+
+    @include sm-breakpoint {
+      padding: torem(40) 0;
+
+      .wrapper {
+        width: 100%;
+      }
+
+      &.creatine {
+        padding: torem(40) 0 torem(24);
+      }
+    }
+  }
+}
