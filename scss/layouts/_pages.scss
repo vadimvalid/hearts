@@ -23,6 +23,7 @@
         align-items: flex-start;
         gap: torem(32);
         width: 50%;
+        min-height: 45vw;
         padding: torem(72) torem(66);
         background: linear-gradient(
             176deg,
@@ -123,6 +124,30 @@
           }
         }
       }
+
+      @include md-breakpoint {
+        flex-direction: column;
+
+        .item {
+          width: 100%;
+          min-height: torem(730);
+          padding: torem(42) torem(36);
+
+          &__title {
+            h2 {
+              font-size: torem(44);
+            }
+          }
+
+          &__picture {
+            width: 70%;
+          }
+
+          &:last-child {
+            padding: torem(42) torem(36);
+          }
+        }
+      }
     }
 
     &__bottom {
@@ -145,6 +170,24 @@
           display: flex;
           align-items: center;
           gap: torem(44);
+        }
+      }
+
+      @include md-breakpoint {
+        padding: torem(62) 0 torem(65);
+
+        h1 {
+          font-size: torem(34);
+        }
+
+        .item {
+          flex-direction: column;
+          gap: torem(44);
+
+          &__block {
+            flex-direction: column;
+            align-items: flex-start;
+          }
         }
       }
     }

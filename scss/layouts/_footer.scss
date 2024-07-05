@@ -52,4 +52,24 @@
       text-decoration: underline;
     }
   }
+
+  @include md-breakpoint {
+    padding: torem(40) torem(16);
+
+    .container-fluid {
+      gap: torem(56);
+    }
+
+    &__top {
+      flex-direction: column;
+      gap: torem(22);
+
+      .item {
+        &:last-child {
+          max-width: 100%;
+          text-align: initial;
+        }
+      }
+    }
+  }
 }
