@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-  max-width: torem(1200);
+  max-width: torem(1232);
   width: 100%;
   margin: 0 auto;
-  padding: 0 torem(50);
+  padding: 0 torem(16);
 
   @include sm-breakpoint {
     padding: 0 torem(36);

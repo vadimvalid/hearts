@@ -1,0 +1,84 @@
+.section {
+  &--hero {
+    position: relative;
+    background: linear-gradient(
+        176deg,
+        rgba(255, 255, 255, 0.1) 10.56%,
+        rgba(255, 255, 255, 0) 71.76%
+      ),
+      #0d5a34;
+    color: $white;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/hero-bg.png");
+      background-repeat: no-repeat;
+      background-position: center right;
+
+      @supports (background-image: url("../images/hero-bg.webp")) {
+        background-image: url("../images/hero-bg.webp");
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/heart-full.png");
+      background-position: 85% 100%;
+      background-repeat: no-repeat;
+      background-size: 30%;
+      z-index: 1;
+
+      @supports (background-image: url("../images/heart-full.webp")) {
+        background-image: url("../images/heart-full.webp");
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: torem(40);
+      padding: torem(185) 0 torem(118);
+
+      font-weight: 500;
+
+      h1 {
+        font-size: torem(82);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+    }
+
+    &__picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 75%;
+      height: 85%;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: bottom right;
+      }
+    }
+  }
+}
