@@ -1,0 +1,240 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-height: 100vh;
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    &__items {
+      position: relative;
+      display: flex;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 55%;
+        background-image: url("../images/pulse.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @supports (background-image: url("../images/pulse.webp")) {
+          background-image: url("../images/pulse.webp");
+        }
+
+        @include md-breakpoint {
+          display: none;
+        }
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: torem(32);
+        width: 50%;
+        min-height: 45vw;
+        padding: torem(72) torem(66);
+        background: linear-gradient(
+            176deg,
+            rgba(255, 255, 255, 0.1) 10.56%,
+            rgba(255, 255, 255, 0) 71.76%
+          ),
+          #0d5a34;
+        color: $white;
+
+        &__title {
+          position: relative;
+          z-index: 2;
+
+          h2 {
+            font-weight: 700;
+            font-size: torem(66);
+            line-height: 1.1;
+            text-transform: uppercase;
+          }
+        }
+
+        &__text {
+          position: relative;
+          z-index: 2;
+          font-size: torem(17);
+          font-weight: 500;
+          line-height: 1.3;
+        }
+
+        > a {
+          position: relative;
+          z-index: 1;
+        }
+
+        &__picture {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 70%;
+          height: 70%;
+          z-index: 1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom right;
+          }
+        }
+
+        &:last-child {
+          padding: torem(72) torem(86);
+          background: linear-gradient(
+              176deg,
+              rgba(255, 255, 255, 0.5) 10.56%,
+              rgba(255, 255, 255, 0) 71.76%
+            ),
+            #c8ec1d;
+          color: $greenDark;
+
+          .item__picture {
+            img {
+              object-position: bottom;
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/heart-half.png");
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: 50%;
+
+            @supports (background-image: url("../images/heart-half.webp")) {
+              background-image: url("../images/heart-half.webp");
+            }
+          }
+        }
+      }
+
+      @include md-breakpoint {
+        flex-direction: column;
+
+        .item {
+          position: relative;
+          width: 100%;
+          min-height: torem(730);
+          padding: torem(42) torem(36);
+
+          &__title {
+            h2 {
+              font-size: torem(44);
+            }
+          }
+
+          &__picture {
+            width: 70%;
+          }
+
+          &:last-child {
+            padding: torem(42) torem(36);
+
+            .item__picture {
+              img {
+                object-position: bottom right;
+              }
+            }
+
+            &:before {
+              background-image: url("../images/heart-full.png");
+              background-position: center right;
+              background-size: 100%;
+              transform: translateX(50%);
+
+              @supports (background-image: url("../images/heart-full.webp")) {
+                background-image: url("../images/heart-full.webp");
+              }
+            }
+
+            &:after {
+              background-size: 250%;
+              background-position: 65% 85%;
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/pulse.png");
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position: 20% 85%;
+
+            @supports (background-image: url("../images/pulse.webp")) {
+              background-image: url("../images/pulse.webp");
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      padding: torem(83) 0 torem(90);
+      background: $white;
+
+      h1 {
+        font-size: torem(40);
+        font-weight: 700;
+        line-height: 1.1;
+        color: $greenDark;
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+
+        &__block {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: torem(44);
+        }
+      }
+
+      @include md-breakpoint {
+        padding: torem(62) 0 torem(65);
+
+        h1 {
+          font-size: torem(34);
+        }
+
+        .item {
+          flex-direction: column;
+          gap: torem(44);
+
+          &__block {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
