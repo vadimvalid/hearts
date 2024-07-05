@@ -14,7 +14,28 @@
     grid-row-gap: 0px;
 
     &__items {
+      position: relative;
       display: flex;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 55%;
+        background-image: url("../images/pulse.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @supports (background-image: url("../images/pulse.webp")) {
+          background-image: url("../images/pulse.webp");
+        }
+
+        @include md-breakpoint {
+          display: none;
+        }
+      }
 
       .item {
         position: relative;
@@ -32,23 +53,6 @@
           ),
           #0d5a34;
         color: $white;
-
-        // &:after {
-        //   content: "";
-        //   position: absolute;
-        //   right: 0;
-        //   bottom: 0;
-        //   width: 100%;
-        //   height: 55%;
-        //   background-image: url("../images/pulse.png");
-        //   background-repeat: no-repeat;
-        //   transform: translateX(28%);
-        //   background-size: 125%;
-
-        //   @supports (background-image: url("../images/pulse.webp")) {
-        //     background-image: url("../images/pulse.webp");
-        //   }
-        // }
 
         &__title {
           position: relative;
@@ -70,19 +74,24 @@
           line-height: 1.3;
         }
 
+        > a {
+          position: relative;
+          z-index: 1;
+        }
+
         &__picture {
           position: absolute;
           right: 0;
           bottom: 0;
-          width: 50%;
-          height: 65%;
+          width: 70%;
+          height: 70%;
           z-index: 1;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            object-position: bottom;
+            object-position: bottom right;
           }
         }
 
@@ -96,15 +105,11 @@
             #c8ec1d;
           color: $greenDark;
 
-          // &:after {
-          //   left: 0;
-          //   right: auto;
-          //   bottom: 0;
-          //   width: 100%;
-          //   height: 55%;
-          //   transform: translateX(0%);
-          //   background-size: 150%;
-          // }
+          .item__picture {
+            img {
+              object-position: bottom;
+            }
+          }
 
           &:before {
             content: "";
@@ -116,7 +121,7 @@
             background-image: url("../images/heart-half.png");
             background-repeat: no-repeat;
             background-position: bottom right;
-            background-size: 40%;
+            background-size: 50%;
 
             @supports (background-image: url("../images/heart-half.webp")) {
               background-image: url("../images/heart-half.webp");
@@ -129,6 +134,7 @@
         flex-direction: column;
 
         .item {
+          position: relative;
           width: 100%;
           min-height: torem(730);
           padding: torem(42) torem(36);
@@ -145,6 +151,45 @@
 
           &:last-child {
             padding: torem(42) torem(36);
+
+            .item__picture {
+              img {
+                object-position: bottom right;
+              }
+            }
+
+            &:before {
+              background-image: url("../images/heart-full.png");
+              background-position: center right;
+              background-size: 100%;
+              transform: translateX(50%);
+
+              @supports (background-image: url("../images/heart-full.webp")) {
+                background-image: url("../images/heart-full.webp");
+              }
+            }
+
+            &:after {
+              background-size: 250%;
+              background-position: 65% 85%;
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/pulse.png");
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position: 20% 85%;
+
+            @supports (background-image: url("../images/pulse.webp")) {
+              background-image: url("../images/pulse.webp");
+            }
           }
         }
       }
