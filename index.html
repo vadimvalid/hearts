@@ -94,58 +94,129 @@
       <div class="main__items">
         <div class="item">
           <div class="item__title">
-            <h2>У меня что-то с сердцем?</h2>
+            <h2>
+              У меня что-то <br />
+              с сердцем?
+            </h2>
           </div>
           <div class="item__text">
             <p>
-              Без паники! Возможно, ничего страшного не происходит, изучите
-              информацию и запишитесь к врачу
+              Без паники! Возможно, ничего <br />
+              страшного не происходит, изучите <br />
+              информацию и запишитесь <br />
+              к врачу
             </p>
-
-            <li>
-              <a href="./article/simptony/mocha_drugogo_tsveta.html"
-                >Моча другого цвета</a
-              >
-            </li>
-            <li>
-              <a href="./article/simptony/vysokiy_kreatinin.html"
-                >Высокий креатинин</a
-              >
-            </li>
-            <li>
-              <a href="./article/simptony/drugie_otkloneniya.html"
-                >Другие отклонения в анализе мочи</a
-              >
-            </li>
-            <a href="#" class=""
-              ><img src="./images/icons/arrow-white.svg" alt="arrow"
-            /></a>
           </div>
+          <a href="#" class=""
+            ><img src="./images/icons/arrow-white.svg" alt="arrow"
+          /></a>
+          <picture class="item__picture">
+            <source media="(min-width: 768px)" srcset="./images/home-1.webp" />
+            <source
+              media="(min-width: 320px)"
+              srcset="./images/home-1-mobile.webp"
+            />
+            <img
+              src="./images/home-1.png"
+              alt="У меня что-то с сердцем"
+              loading="lazy"
+              decoding="async"
+              width="548"
+              height="644"
+            />
+          </picture>
         </div>
         <div class="item">
           <div class="item__title">
-            <h2>Я живу с ХСН</h2>
+            <h2>
+              Я живу <br />
+              с ХСН
+            </h2>
           </div>
           <div class="item__text">
             <p>
-              Жизнь с ХСН может быть комфортной, полноценной и продолжительной
+              Жизнь с ХСН может быть <br />
+              комфортной, полноценной <br />
+              и продолжительной
             </p>
-
-            <a href="#" class=""
-              ><img src="./images/icons/arrow.svg" alt="arrow"
-            /></a>
           </div>
+          <a href="#" class=""
+            ><img src="./images/icons/arrow.svg" alt="arrow"
+          /></a>
+          <picture class="item__picture">
+            <source media="(min-width: 768px)" srcset="./images/home-2.webp" />
+            <source
+              media="(min-width: 320px)"
+              srcset="./images/home-2-mobile.webp"
+            />
+            <img
+              src="./images/home-2.png"
+              alt="У меня что-то с сердцем"
+              loading="lazy"
+              decoding="async"
+              width="548"
+              height="644"
+            />
+          </picture>
         </div>
       </div>
       <div class="main__bottom">
-        <div class="item">
-          <h1>жизнь с С3-гломерулопатией может быть стабильной и комфортной</h1>
-          <img src="./images/logo.svg" alt="Лого" />
-          <p>782189/GenMed/Dig/03.24/0</p>
+        <div class="container-fluid">
+          <div class="item">
+            <div class="item__block">
+              <img src="./images/icons/icon-17.svg" alt="Лого" />
+              <h1>Эта болезнь может коснуться каждой семьи!</h1>
+            </div>
+            <div class="item__block">
+              <p>
+                Очень важно при появлении первых признаков заболевания: одышки,
+                отеков или быстрой утомляемости, а также других возможных
+                симптомов — обратиться к грамотному специалисту, чтобы пройти
+                обследование и разобраться с причинами.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__top">
+          <div class="item">
+            <p>12385</p>
+            <p>человек уже знают</p>
+          </div>
+          <div class="item">
+            <p>
+              Использованные изображения не являются изображениями реальных
+              пациентов
+            </p>
+            <p>11211039/Val+Sac/Dig/06.24/0</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>
+            Данный материал не является рекомендацией к лечению и не подменяет
+            собой консультацию специалиста. Для получения квалифицированной
+            медицинской консультации или помощи обратитесь к своему лечащему
+            врачу. Для распространения на территории РФ. Материал подготовлен
+            при финансовой поддержке ООО «Новартис Фарма».
+          </p>
+          <p>
+            ООО «Новартис Фарма» Ленинградский проспект, д. 70 Москва, 125315
+            Россия. Тел:
+            <a href="tel:+7 (495) 967 12 70">+7 (495) 967 12 70</a> Факс: +7
+            (495) 967 12 68
+            <a
+              href="www.novartis.com "
+              class="footer__bottom__link"
+              target="_blank"
+              >www.novartis.com </a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
     <script>
       if (window.matchMedia("(max-width: 768px)").matches) {
         const items = document.querySelectorAll(".home .main__items .item");
