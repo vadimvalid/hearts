@@ -18,7 +18,8 @@
       height: 100%;
       background-image: url("../images/hero-bg.png");
       background-repeat: no-repeat;
-      background-position: center right;
+      background-position: 98% 63%;
+      background-size: 70% 50%;
 
       @supports (background-image: url("../images/hero-bg.webp")) {
         background-image: url("../images/hero-bg.webp");
@@ -33,9 +34,9 @@
       width: 100%;
       height: 100%;
       background-image: url("../images/heart-full.png");
-      background-position: 85% 100%;
+      background-position: 82% 100%;
       background-repeat: no-repeat;
-      background-size: 30%;
+      background-size: 28%;
       z-index: 1;
 
       @supports (background-image: url("../images/heart-full.webp")) {
@@ -67,7 +68,7 @@
 
     &__picture {
       position: absolute;
-      right: 0;
+      right: 50px;
       bottom: 0;
       width: 75%;
       height: 85%;
@@ -78,6 +79,166 @@
         height: 100%;
         object-fit: contain;
         object-position: bottom right;
+      }
+    }
+  }
+
+  &--video {
+    padding: torem(112) 0;
+    background: #f2f2f2;
+
+    .container {
+      display: flex;
+      gap: torem(60);
+
+      > * {
+        flex: 1;
+      }
+    }
+
+    .video {
+      &__link {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+
+        > img {
+          border-radius: 24px;
+        }
+
+        &__icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: torem(40);
+        padding: torem(14) 0;
+
+        h2 {
+          font-size: torem(50);
+          font-weight: 700;
+          line-height: 110%;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &--simptoms {
+    padding: torem(90) 0 torem(80);
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: torem(67);
+    }
+
+    .simptoms {
+      &__header {
+        display: flex;
+        align-items: center;
+        gap: torem(40);
+
+        h2 {
+          font-size: torem(50);
+          font-weight: 700;
+          line-height: 110%;
+          text-transform: uppercase;
+        }
+      }
+
+      &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: torem(50);
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          gap: torem(10);
+          padding: torem(21) torem(35) torem(18) torem(23);
+          border-radius: 24px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          font-size: torem(16);
+
+          &__text {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: torem(310);
+
+            > p {
+              opacity: 0;
+              visibility: hidden;
+            }
+
+            > img {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+
+            &:hover {
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              > p {
+                animation: showText 0.3s forwards 0.2s;
+                display: block;
+              }
+
+              > img {
+                animation: hideIcon 0.5s forwards;
+              }
+            }
+
+            @keyframes hideIcon {
+              from {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+              }
+
+              to {
+                opacity: 0;
+                transform: translate(-50%, -100%) scale(0);
+              }
+            }
+
+            @keyframes showText {
+              from {
+                opacity: 0;
+                visibility: hidden;
+              }
+
+              to {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+
+          &__toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+              font-size: torem(20);
+              font-weight: 600;
+              line-height: 1.1;
+              color: #262d3f;
+            }
+          }
+        }
       }
     }
   }

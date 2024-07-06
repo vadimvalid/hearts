@@ -137,6 +137,153 @@
           </picture>
         </div>
       </section>
+      <section class="section section--video">
+        <div class="container">
+          <a href="#" class="video__link">
+            <picture>
+              <source type="image/webp" srcset="./images/video.webp" />
+              <img
+                src="./images/video.png"
+                alt="Что такое ХСН?"
+                loading="lazy"
+                decoding="async"
+                width="570"
+                height="355"
+              />
+            </picture>
+            <img
+              src="./images/icons/play.svg"
+              alt=""
+              class="video__link__icon"
+            />
+          </a>
+          <div class="video__text">
+            <h2>Что такое ХСН?</h2>
+            <p>
+              <strong>Сердечная недостаточность</strong> – это состояние, при
+              котором сердце начинает хуже перекачивать кровь по сосудам. Из-за
+              этого органы и ткани не получают в достаточном количестве
+              питательные вещества и кислород, а в итоге организму становится
+              все сложнее справляться с повседневными нагрузками
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section section--simptoms">
+        <div class="container">
+          <div class="simptoms__header">
+            <h2>Симптомы</h2>
+            <p>
+              Выберите симптомы, которые вы замечали у себя или вашего
+              родственника.
+            </p>
+          </div>
+          <div class="simptoms__items">
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-22.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Одышка</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-18.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Одышка в положении лежа</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-19.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Слабость</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-20.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Повышенная утомляемость</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-23.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Сердцебиение</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="simptoms__items__item">
+              <div class="simptoms__items__item__text">
+                <img src="./images/icons/icon-21.svg" alt="" />
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Minus, obcaecati aliquam. Fugit, tempora. Vero sapiente,
+                  tenetur accusantium est recusandae voluptate!
+                </p>
+              </div>
+              <div class="simptoms__items__item__toggle">
+                <p>Отеки</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="container-fluid">
@@ -176,22 +323,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        const items = document.querySelectorAll(".home .main__items .item");
-
-        items.forEach((item) => {
-          item.addEventListener("click", function () {
-            item.classList.toggle("active");
-
-            items.forEach((item) => {
-              if (item !== this) {
-                item.classList.remove("active");
-              }
-            });
-          });
-        });
-      }
-    </script>
   </body>
 </html>

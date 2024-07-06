@@ -217,22 +217,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        const items = document.querySelectorAll(".home .main__items .item");
-
-        items.forEach((item) => {
-          item.addEventListener("click", function () {
-            item.classList.toggle("active");
-
-            items.forEach((item) => {
-              if (item !== this) {
-                item.classList.remove("active");
-              }
-            });
-          });
-        });
-      }
-    </script>
   </body>
 </html>
