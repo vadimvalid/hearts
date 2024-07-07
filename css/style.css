@@ -1319,6 +1319,48 @@ h2 {
     font-size: 1.125rem;
   }
 }
+.section--subscribe .subscribe__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.125rem;
+  padding: 1.625rem 2.8125rem 1.6875rem 2.3125rem;
+  border-radius: 20px;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.58) 79.5%), #dfdfdf;
+  color: #333;
+  font-weight: 600;
+}
+.section--subscribe .subscribe__content > * {
+  position: relative;
+  z-index: 1;
+}
+.section--subscribe .subscribe__content:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50%;
+  height: calc(100% + 60px);
+  background-image: url("../images/tg.png");
+  background-repeat: no-repeat;
+  background-position: 28%;
+  background-size: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--subscribe .subscribe__content {
+    padding: 1.25rem 1.875rem 1.25rem 1.5625rem;
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .section--subscribe .subscribe__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 .button {
   all: unset;
@@ -1333,6 +1375,13 @@ h2 {
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
+}
+.button--secondary {
+  padding: 1.125rem 1.375rem;
+  background: transparent;
+  border: 3px solid #2bacee;
+  border-radius: 18px;
+  color: #2bacee;
 }
 
 .switch {

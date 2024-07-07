@@ -11,4 +11,12 @@
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
+
+  &--secondary {
+    padding: torem(18) torem(22);
+    background: transparent;
+    border: 3px solid $blue;
+    border-radius: 18px;
+    color: $blue;
+  }
 }

@@ -800,4 +800,55 @@
       }
     }
   }
+
+  &--subscribe {
+    .subscribe {
+      &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: torem(18);
+        padding: torem(26) torem(45) torem(27) torem(37);
+        border-radius: 20px;
+        background: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0.58) 79.5%
+          ),
+          #dfdfdf;
+        color: $grey;
+        font-weight: 600;
+
+        > * {
+          position: relative;
+          z-index: 1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 50%;
+          height: calc(100% + 60px);
+          background-image: url("../images/tg.png");
+          background-repeat: no-repeat;
+          background-position: 28%;
+          background-size: 50%;
+          transform: translateY(-50%);
+        }
+
+        @include md-breakpoint {
+          padding: torem(20) torem(30) torem(20) torem(25);
+          font-size: torem(18);
+        }
+
+        @include sm-breakpoint {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
 }
