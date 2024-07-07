@@ -167,6 +167,7 @@
         &__link {
           img:not(.video__link__icon) {
             width: 100%;
+            max-height: torem(290);
           }
         }
 
@@ -449,7 +450,8 @@
 
         &__button {
           width: 100%;
-          padding: torem(22);
+          padding: torem(18) torem(22);
+          font-size: torem(20);
         }
       }
     }
@@ -682,7 +684,7 @@
 
       @include md-breakpoint {
         h2 {
-          font-size: torem(45);
+          font-size: clamp(torem(28), 7vw, torem(50));
         }
 
         p {
@@ -847,6 +849,53 @@
         @include sm-breakpoint {
           flex-direction: column;
           align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  &--points {
+    padding-bottom: torem(135);
+
+    .points {
+      &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: torem(95) torem(20);
+
+        &__item {
+          display: flex;
+          align-items: center;
+          gap: torem(30);
+          padding: torem(10) torem(35);
+          font-size: torem(20);
+
+          img {
+            width: torem(100);
+          }
+
+          > p {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding-bottom: torem(80);
+
+      .points {
+        &__items {
+          grid-template-columns: repeat(1, 1fr);
+          gap: torem(30);
+
+          &__item {
+            padding: 0;
+
+            img {
+              width: torem(80);
+            }
+          }
         }
       }
     }
