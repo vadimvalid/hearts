@@ -256,7 +256,15 @@
         #c8ec1d;
 
       &__text {
+        padding-bottom: torem(150);
         color: $greenDark;
+      }
+    }
+
+    &--video {
+      padding-bottom: torem(90);
+      .container {
+        align-items: center;
       }
     }
 

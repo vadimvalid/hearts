@@ -630,4 +630,81 @@
       padding: torem(62) 0;
     }
   }
+
+  &--diary {
+    position: relative;
+    margin-top: torem(90);
+    padding: torem(93) 0 torem(96);
+    background-color: $yellow;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75%;
+      background-image: url("../images/diary.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 76% bottom;
+
+      @supports (background-image: url("../images/diary.webp")) {
+        background-image: url("../images/diary.webp");
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: torem(28);
+
+      h2 {
+        font-size: torem(50);
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      p {
+        max-width: torem(610);
+        margin-bottom: torem(21);
+        font-size: torem(20);
+      }
+
+      .button {
+        padding: torem(16) torem(107);
+        font-size: torem(28);
+      }
+
+      @include md-breakpoint {
+        h2 {
+          font-size: torem(45);
+        }
+
+        p {
+          max-width: none;
+        }
+
+        .button {
+          padding: torem(16) torem(22);
+          font-size: torem(22);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      margin-top: torem(62);
+      padding: torem(62) 0;
+
+      &:after {
+        height: 55%;
+        background-size: contain;
+        background-position: right bottom;
+      }
+    }
+  }
 }

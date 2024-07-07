@@ -444,7 +444,14 @@ h2 {
   background: linear-gradient(176deg, rgba(255, 255, 255, 0.5) 10.56%, rgba(255, 255, 255, 0) 71.76%), #c8ec1d;
 }
 .xsn .section--hero__text {
+  padding-bottom: 9.375rem;
   color: #0e4128;
+}
+.xsn .section--video {
+  padding-bottom: 5.625rem;
+}
+.xsn .section--video .container {
+  align-items: center;
 }
 .xsn .section--notice .notice__title {
   flex: 0 1 55%;
@@ -1166,6 +1173,75 @@ h2 {
 @media screen and (max-width: 991.98px) {
   .section--details {
     padding: 3.875rem 0;
+  }
+}
+.section--diary {
+  position: relative;
+  margin-top: 5.625rem;
+  padding: 5.8125rem 0 6rem;
+  background-color: #c8ec1d;
+}
+.section--diary:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  background-image: url("../images/diary.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 76% bottom;
+}
+@supports (background-image: url("../images/diary.webp")) {
+  .section--diary:after {
+    background-image: url("../images/diary.webp");
+  }
+}
+.section--diary .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+.section--diary .container h2 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.section--diary .container p {
+  max-width: 38.125rem;
+  margin-bottom: 1.3125rem;
+  font-size: 1.25rem;
+}
+.section--diary .container .button {
+  padding: 1rem 6.6875rem;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 991.98px) {
+  .section--diary .container h2 {
+    font-size: 2.8125rem;
+  }
+  .section--diary .container p {
+    max-width: none;
+  }
+  .section--diary .container .button {
+    padding: 1rem 1.375rem;
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .section--diary {
+    margin-top: 3.875rem;
+    padding: 3.875rem 0;
+  }
+  .section--diary:after {
+    height: 55%;
+    background-size: contain;
+    background-position: right bottom;
   }
 }
 
