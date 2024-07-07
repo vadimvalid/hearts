@@ -19,7 +19,7 @@ body {
   max-width: torem(1232);
   width: 100%;
   margin: 0 auto;
-  padding: 0 torem(16);
+  padding: 0 torem(15);
 
   @include sm-breakpoint {
     padding: 0 torem(36);

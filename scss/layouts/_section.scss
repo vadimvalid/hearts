@@ -167,6 +167,7 @@
         &__link {
           img:not(.video__link__icon) {
             width: 100%;
+            max-height: torem(290);
           }
         }
 
@@ -449,7 +450,8 @@
 
         &__button {
           width: 100%;
-          padding: torem(22);
+          padding: torem(18) torem(22);
+          font-size: torem(20);
         }
       }
     }
@@ -628,6 +630,274 @@
 
     @include md-breakpoint {
       padding: torem(62) 0;
+    }
+  }
+
+  &--diary {
+    position: relative;
+    margin-top: torem(90);
+    padding: torem(93) 0 torem(96);
+    background-color: $yellow;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 75%;
+      background-image: url("../images/diary.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 76% bottom;
+
+      @supports (background-image: url("../images/diary.webp")) {
+        background-image: url("../images/diary.webp");
+      }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: torem(28);
+
+      h2 {
+        font-size: torem(50);
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      p {
+        max-width: torem(610);
+        margin-bottom: torem(21);
+        font-size: torem(20);
+      }
+
+      .button {
+        padding: torem(16) torem(107);
+        font-size: torem(28);
+      }
+
+      @include md-breakpoint {
+        h2 {
+          font-size: clamp(torem(28), 7vw, torem(50));
+        }
+
+        p {
+          max-width: none;
+        }
+
+        .button {
+          padding: torem(16) torem(22);
+          font-size: torem(22);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      margin-top: torem(62);
+      padding: torem(62) 0;
+
+      &:after {
+        height: 55%;
+        background-size: contain;
+        background-position: right bottom;
+      }
+    }
+  }
+
+  &--articles {
+    padding: torem(80) 0 torem(90);
+
+    .articles {
+      &__items {
+        display: flex;
+        gap: torem(45);
+
+        &__item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: torem(20);
+          padding: torem(21) torem(20);
+          border-radius: 20px;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+          background-color: $white;
+          font-size: torem(20);
+
+          &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: torem(60);
+            margin-bottom: torem(8);
+
+            img {
+              width: torem(88);
+              height: torem(88);
+            }
+          }
+
+          h4 {
+            font-size: torem(24);
+            font-weight: 700;
+            line-height: 1;
+          }
+
+          > p {
+            margin-bottom: torem(15);
+          }
+
+          > a {
+            display: flex;
+            align-items: center;
+            gap: torem(16);
+            margin-top: auto;
+            font-size: torem(20);
+            font-weight: 600;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      .articles {
+        &__items {
+          flex-direction: column;
+          gap: torem(25);
+
+          &__item {
+            font-size: torem(18);
+
+            &__icon {
+              padding: torem(30);
+
+              img {
+                width: torem(60);
+                height: torem(60);
+              }
+            }
+
+            h4 {
+              font-size: torem(20);
+            }
+
+            > p {
+              margin-bottom: torem(10);
+            }
+
+            > a {
+              gap: torem(10);
+              font-size: torem(18);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--subscribe {
+    .subscribe {
+      &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: torem(18);
+        padding: torem(26) torem(45) torem(27) torem(37);
+        border-radius: 20px;
+        background: linear-gradient(
+            270deg,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0.58) 79.5%
+          ),
+          #dfdfdf;
+        color: $grey;
+        font-weight: 600;
+
+        > * {
+          position: relative;
+          z-index: 1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 50%;
+          height: calc(100% + 60px);
+          background-image: url("../images/tg.png");
+          background-repeat: no-repeat;
+          background-position: 28%;
+          background-size: 50%;
+          transform: translateY(-50%);
+        }
+
+        @include md-breakpoint {
+          padding: torem(20) torem(30) torem(20) torem(25);
+          font-size: torem(18);
+        }
+
+        @include sm-breakpoint {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  &--points {
+    padding-bottom: torem(135);
+
+    .points {
+      &__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: torem(95) torem(20);
+
+        &__item {
+          display: flex;
+          align-items: center;
+          gap: torem(30);
+          padding: torem(10) torem(35);
+          font-size: torem(20);
+
+          img {
+            width: torem(100);
+          }
+
+          > p {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding-bottom: torem(80);
+
+      .points {
+        &__items {
+          grid-template-columns: repeat(1, 1fr);
+          gap: torem(30);
+
+          &__item {
+            padding: 0;
+
+            img {
+              width: torem(80);
+            }
+          }
+        }
+      }
     }
   }
 }

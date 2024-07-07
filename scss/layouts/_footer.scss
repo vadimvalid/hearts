@@ -1,5 +1,5 @@
 .footer {
-  padding: torem(50) 0 torem(22);
+  padding: torem(50) 0 torem(160);
   background: $footer;
 
   .container,
@@ -59,7 +59,7 @@
   }
 
   @include md-breakpoint {
-    padding: torem(40) torem(16);
+    padding: torem(40) 0 torem(80);
 
     .container-fluid {
       gap: torem(56);
