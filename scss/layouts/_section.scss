@@ -81,6 +81,33 @@
         object-position: bottom right;
       }
     }
+
+    @include md-breakpoint {
+      &:before {
+        background-position: left 15%;
+        background-size: contain;
+      }
+
+      &:after {
+        background-position: right 15%;
+        background-size: 60%;
+      }
+
+      &__text {
+        position: relative;
+        z-index: 5;
+        padding: torem(185) 0 torem(118);
+
+        h1 {
+          font-size: torem(54);
+        }
+      }
+
+      &__picture {
+        right: 0;
+        height: 60vw;
+      }
+    }
   }
 
   &--video {
@@ -128,6 +155,30 @@
         }
       }
     }
+
+    @include md-breakpoint {
+      padding: torem(64) 0;
+
+      .container {
+        flex-direction: column-reverse;
+      }
+
+      .video {
+        &__link {
+          img:not(.video__link__icon) {
+            width: 100%;
+          }
+        }
+
+        &__text {
+          padding: 0;
+
+          h2 {
+            font-size: torem(45);
+          }
+        }
+      }
+    }
   }
 
   &--simptoms {
@@ -166,7 +217,7 @@
           display: flex;
           flex-direction: column;
           gap: torem(26);
-          padding: torem(21) torem(35) 0 torem(23);
+          padding: torem(21) torem(35) torem(20) torem(23);
           border-radius: 24px;
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
           font-size: torem(16);
@@ -220,8 +271,10 @@
             justify-content: space-between;
             align-items: center;
             gap: torem(48);
+            margin-top: auto;
 
             p {
+              flex: 1;
               font-size: torem(20);
               font-weight: 600;
               line-height: 1.1;
@@ -276,6 +329,44 @@
               border-width: 20px 16px 0 16px;
               border-color: $yellow transparent transparent transparent;
               transform: rotate(0deg) translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      .container {
+        gap: torem(50);
+      }
+
+      .simptoms {
+        &__header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: torem(30);
+
+          h2 {
+            font-size: torem(45);
+          }
+
+          > p {
+            max-width: none;
+          }
+        }
+
+        &__items {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: torem(25);
+
+          &__item {
+            flex-direction: column;
+
+            &__toggle {
+              gap: torem(20);
             }
           }
         }
@@ -348,6 +439,20 @@
         z-index: 1;
       }
     }
+
+    @include md-breakpoint {
+      .appointment {
+        &__list,
+        &__text {
+          padding: 0 5vw;
+        }
+
+        &__button {
+          width: 100%;
+          padding: torem(22);
+        }
+      }
+    }
   }
 
   &--dangerous {
@@ -402,6 +507,42 @@
         }
       }
     }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      h2 {
+        padding-bottom: torem(40);
+        font-size: torem(45);
+      }
+
+      .dangerous {
+        &__items {
+          flex-direction: column;
+          gap: torem(40);
+
+          &__item {
+            padding-top: torem(20);
+
+            h3 {
+              font-size: torem(50);
+            }
+
+            &:first-child {
+              p {
+                max-width: none;
+              }
+            }
+
+            &:last-child {
+              p {
+                max-width: none;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   &--notice {
@@ -426,6 +567,15 @@
 
       &__text {
         flex: 0 1 60%;
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      .container {
+        flex-direction: column;
+        gap: torem(50);
       }
     }
   }
@@ -461,11 +611,23 @@
       ol {
         list-style-type: auto;
         padding: 0 torem(50) 0 torem(30);
+        word-break: break-word;
 
         li {
           list-style-type: inherit;
         }
       }
+
+      &[open] {
+        summary {
+          background: url("../images/icons/arrow-up.svg") no-repeat center right;
+          background-size: torem(30);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
     }
   }
 }

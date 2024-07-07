@@ -112,6 +112,11 @@ body {
   font-weight: 400;
   line-height: 1.3;
 }
+@media screen and (max-width: 767.98px) {
+  body {
+    font-size: 1.25rem;
+  }
+}
 
 .container {
   max-width: 77rem;
@@ -668,6 +673,28 @@ h2 {
   -o-object-position: bottom right;
   object-position: bottom right;
 }
+@media screen and (max-width: 991.98px) {
+  .section--hero:before {
+    background-position: left 15%;
+    background-size: contain;
+  }
+  .section--hero:after {
+    background-position: right 15%;
+    background-size: 60%;
+  }
+  .section--hero__text {
+    position: relative;
+    z-index: 5;
+    padding: 11.5625rem 0 7.375rem;
+  }
+  .section--hero__text h1 {
+    font-size: 3.375rem;
+  }
+  .section--hero__picture {
+    right: 0;
+    height: 60vw;
+  }
+}
 .section--video {
   padding: 7rem 0;
   background: #f2f2f2;
@@ -706,6 +733,23 @@ h2 {
   line-height: 110%;
   text-transform: uppercase;
 }
+@media screen and (max-width: 991.98px) {
+  .section--video {
+    padding: 4rem 0;
+  }
+  .section--video .container {
+    flex-direction: column-reverse;
+  }
+  .section--video .video__link img:not(.video__link__icon) {
+    width: 100%;
+  }
+  .section--video .video__text {
+    padding: 0;
+  }
+  .section--video .video__text h2 {
+    font-size: 2.8125rem;
+  }
+}
 .section--simptoms {
   padding: 5.625rem 0 5.25rem;
 }
@@ -739,7 +783,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 1.625rem;
-  padding: 1.3125rem 2.1875rem 0 1.4375rem;
+  padding: 1.3125rem 2.1875rem 1.25rem 1.4375rem;
   border-radius: 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   font-size: 1rem;
@@ -811,8 +855,10 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  margin-top: auto;
 }
 .section--simptoms .simptoms__items__item__toggle p {
+  flex: 1;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.1;
@@ -861,6 +907,38 @@ h2 {
   border-color: #c8ec1d transparent transparent transparent;
   -webkit-transform: rotate(0deg) translateX(-50%);
   transform: rotate(0deg) translateX(-50%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--simptoms {
+    padding: 3.875rem 0;
+  }
+  .section--simptoms .container {
+    gap: 3.125rem;
+  }
+  .section--simptoms .simptoms__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.875rem;
+  }
+  .section--simptoms .simptoms__header h2 {
+    font-size: 2.8125rem;
+  }
+  .section--simptoms .simptoms__header > p {
+    max-width: none;
+  }
+  .section--simptoms .simptoms__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5625rem;
+  }
+  .section--simptoms .simptoms__items__item {
+    flex-direction: column;
+  }
+  .section--simptoms .simptoms__items__item__toggle {
+    gap: 1.25rem;
+  }
 }
 .section--appointment {
   padding: 3.625rem 0 1.625rem;
@@ -920,6 +998,15 @@ h2 {
   opacity: 0.8;
   z-index: 1;
 }
+@media screen and (max-width: 991.98px) {
+  .section--appointment .appointment__list, .section--appointment .appointment__text {
+    padding: 0 5vw;
+  }
+  .section--appointment .appointment__button {
+    width: 100%;
+    padding: 1.375rem;
+  }
+}
 .section--dangerous {
   padding: 8.125rem 0 0;
 }
@@ -960,6 +1047,31 @@ h2 {
 .section--dangerous .dangerous__items__item:last-child p {
   max-width: 22.5rem;
 }
+@media screen and (max-width: 991.98px) {
+  .section--dangerous {
+    padding: 3.875rem 0;
+  }
+  .section--dangerous h2 {
+    padding-bottom: 2.5rem;
+    font-size: 2.8125rem;
+  }
+  .section--dangerous .dangerous__items {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .section--dangerous .dangerous__items__item {
+    padding-top: 1.25rem;
+  }
+  .section--dangerous .dangerous__items__item h3 {
+    font-size: 3.125rem;
+  }
+  .section--dangerous .dangerous__items__item:first-child p {
+    max-width: none;
+  }
+  .section--dangerous .dangerous__items__item:last-child p {
+    max-width: none;
+  }
+}
 .section--notice {
   padding: 6.5625rem 0 5.375rem;
 }
@@ -978,6 +1090,15 @@ h2 {
 }
 .section--notice .notice__text {
   flex: 0 1 60%;
+}
+@media screen and (max-width: 991.98px) {
+  .section--notice {
+    padding: 3.875rem 0;
+  }
+  .section--notice .container {
+    flex-direction: column;
+    gap: 3.125rem;
+  }
 }
 .section--details {
   padding: 5.625rem 0 4.375rem;
@@ -1003,9 +1124,19 @@ h2 {
 .section--details details ol {
   list-style-type: auto;
   padding: 0 3.125rem 0 1.875rem;
+  word-break: break-word;
 }
 .section--details details ol li {
   list-style-type: inherit;
+}
+.section--details details[open] summary {
+  background: url("../images/icons/arrow-up.svg") no-repeat center right;
+  background-size: 1.875rem;
+}
+@media screen and (max-width: 991.98px) {
+  .section--details {
+    padding: 3.875rem 0;
+  }
 }
 
 .button {
