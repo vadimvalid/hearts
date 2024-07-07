@@ -953,4 +953,115 @@
       }
     }
   }
+
+  &--tabs {
+    padding-top: torem(100);
+
+    .tabs {
+      &__header {
+        display: flex;
+        flex-direction: column;
+        gap: torem(60);
+        margin-bottom: torem(60);
+
+        h2 {
+          font-size: torem(50);
+          line-height: 1;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+
+      &__content {
+        display: flex;
+
+        [role="tablist"] {
+          display: flex;
+          flex-direction: column;
+          gap: torem(8);
+          width: torem(420);
+
+          button {
+            all: unset;
+            min-height: torem(72);
+            padding: 0 torem(22);
+            background: #f2f2f2;
+            border-radius: 4px;
+            font-size: torem(20);
+            font-weight: 400;
+            line-height: 1.5;
+            color: $grey;
+            cursor: pointer;
+
+            &[aria-selected="true"] {
+              background: $white;
+              color: #262d3f;
+              font-weight: 700;
+            }
+          }
+        }
+
+        [role="tabpanel"] {
+          flex: 1;
+          flex-direction: column;
+          gap: torem(30);
+          padding: torem(35) torem(70) torem(18) torem(28);
+          border-radius: 20px;
+          background: $white;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+          transform: scale(1, 1.1) translate(-5px, 20px);
+
+          > * {
+            transform: scale(1, 0.9);
+          }
+
+          h3 {
+            font-size: torem(26);
+            font-weight: 700;
+            line-height: 1;
+          }
+
+          &:not([hidden]) {
+            display: flex;
+          }
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          font-size: torem(20);
+          line-height: 1.5;
+
+          h3 {
+            margin-bottom: torem(38);
+          }
+
+          > p {
+            &:not(:last-of-type) {
+              margin-bottom: torem(15);
+            }
+          }
+        }
+
+        &__bottom {
+          display: flex;
+          align-items: center;
+          gap: torem(10);
+          margin-top: auto;
+          color: $black;
+
+          .button {
+            padding: torem(24) torem(22);
+            font-size: torem(22);
+          }
+
+          > p {
+            flex: 1;
+            font-size: torem(20);
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }

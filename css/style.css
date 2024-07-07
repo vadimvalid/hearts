@@ -194,6 +194,7 @@ h4,
 h5 {
   margin-top: 0;
   letter-spacing: 0.5px;
+  letter-spacing: 0;
 }
 
 .main {
@@ -1485,6 +1486,98 @@ h2 {
 .section--plain-text .plain-text__item li::marker {
   font-size: 1.375rem;
   color: #00b922;
+}
+.section--tabs {
+  padding-top: 6.25rem;
+}
+.section--tabs .tabs__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  margin-bottom: 3.75rem;
+}
+.section--tabs .tabs__header h2 {
+  font-size: 3.125rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.section--tabs .tabs__content {
+  display: flex;
+}
+.section--tabs .tabs__content [role=tablist] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 26.25rem;
+}
+.section--tabs .tabs__content [role=tablist] button {
+  all: unset;
+  min-height: 4.5rem;
+  padding: 0 1.375rem;
+  background: #f2f2f2;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  cursor: pointer;
+}
+.section--tabs .tabs__content [role=tablist] button[aria-selected=true] {
+  background: #fff;
+  color: #262d3f;
+  font-weight: 700;
+}
+.section--tabs .tabs__content [role=tabpanel] {
+  flex: 1;
+  flex-direction: column;
+  gap: 1.875rem;
+  padding: 2.1875rem 4.375rem 1.125rem 1.75rem;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  -webkit-transform: scale(1, 1.1) translate(-5px, 20px);
+  transform: scale(1, 1.1) translate(-5px, 20px);
+}
+.section--tabs .tabs__content [role=tabpanel] > * {
+  -webkit-transform: scale(1, 0.9);
+  transform: scale(1, 0.9);
+}
+.section--tabs .tabs__content [role=tabpanel] h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.section--tabs .tabs__content [role=tabpanel]:not([hidden]) {
+  display: flex;
+}
+.section--tabs .tabs__content__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.section--tabs .tabs__content__text h3 {
+  margin-bottom: 2.375rem;
+}
+.section--tabs .tabs__content__text > p:not(:last-of-type) {
+  margin-bottom: 0.9375rem;
+}
+.section--tabs .tabs__content__bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: auto;
+  color: #282828;
+}
+.section--tabs .tabs__content__bottom .button {
+  padding: 1.5rem 1.375rem;
+  font-size: 1.375rem;
+}
+.section--tabs .tabs__content__bottom > p {
+  flex: 1;
+  font-size: 1.25rem;
+  opacity: 0.6;
 }
 
 .button {
