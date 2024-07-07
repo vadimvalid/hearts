@@ -89,61 +89,40 @@
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body class="home">
+  <body class="xsn">
+    <header class="header">
+      <div class="container">
+        <button class="header__burger">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="header__nav">
+          <ul class="header__nav__menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="./simptoms.html">У меня симптомы</a></li>
+            <li><a href="#" class="active">Я живу с ХСН</a></li>
+            <li><a href="#">Терапия</a></li>
+            <li><a href="#">Диета</a></li>
+            <li><a href="#">ОРВИ при ХСН</a></li>
+          </ul>
+        </nav>
+        <button class="button">Записаться к врачу</button>
+      </div>
+    </header>
     <div class="main">
-      <div class="main__items">
-        <div class="item">
-          <div class="item__title">
-            <h2>
-              У меня что-то <br />
-              с сердцем?
-            </h2>
-          </div>
-          <div class="item__text">
-            <p>
-              Без паники! Возможно, ничего <br />
-              страшного не происходит, изучите <br />
-              информацию и запишитесь <br />
-              к врачу
-            </p>
-          </div>
-          <a href="./simptoms.html" class=""
-            ><img src="./images/icons/arrow-white.svg" alt="arrow"
-          /></a>
-          <picture class="item__picture">
-            <source media="(min-width: 768px)" srcset="./images/home-1.webp" />
-            <source
-              media="(min-width: 320px)"
-              srcset="./images/home-1-mobile.webp"
-            />
-            <img
-              src="./images/home-1.png"
-              alt="У меня что-то с сердцем"
-              loading="lazy"
-              decoding="async"
-              width="548"
-              height="644"
-            />
-          </picture>
-        </div>
-        <div class="item">
-          <div class="item__title">
-            <h2>
+      <section class="section section--hero">
+        <div class="container">
+          <div class="section--hero__text">
+            <h1>
               Я живу <br />
               с ХСН
-            </h2>
-          </div>
-          <div class="item__text">
+            </h1>
             <p>
               Жизнь с ХСН может быть <br />
               комфортной, полноценной <br />
               и продолжительной
             </p>
           </div>
-          <a href="./with-xsn.html" class=""
-            ><img src="./images/icons/arrow.svg" alt="arrow"
-          /></a>
-          <picture class="item__picture">
+          <picture class="section--hero__picture">
             <source media="(min-width: 768px)" srcset="./images/home-2.webp" />
             <source
               media="(min-width: 320px)"
@@ -154,33 +133,69 @@
               alt="У меня что-то с сердцем"
               loading="lazy"
               decoding="async"
-              width="548"
-              height="644"
+              width="585"
+              height="687"
             />
           </picture>
         </div>
-      </div>
-      <div class="main__bottom">
-        <div class="container-fluid">
-          <div class="item">
-            <div class="item__block">
-              <img src="./images/icons/icon-17.svg" alt="Лого" />
-              <h1>Эта болезнь может коснуться каждой семьи!</h1>
-            </div>
-            <div class="item__block">
-              <p>
-                Очень важно при появлении первых признаков заболевания: одышки,
-                отеков или быстрой утомляемости, а также других возможных
-                симптомов — обратиться к грамотному специалисту, чтобы пройти
-                обследование и разобраться с причинами.
-              </p>
-            </div>
+      </section>
+      <section class="section section--video">
+        <div class="container">
+          <a href="#" class="video__link">
+            <picture>
+              <source type="image/webp" srcset="./images/video.webp" />
+              <img
+                src="./images/video.png"
+                alt="Что такое ХСН?"
+                loading="lazy"
+                decoding="async"
+                width="570"
+                height="355"
+              />
+            </picture>
+            <img
+              src="./images/icons/play.svg"
+              alt=""
+              class="video__link__icon"
+            />
+          </a>
+          <div class="video__text">
+            <h2>Что такое ХСН?</h2>
+            <p>
+              <strong>Сердечная недостаточность</strong> – это состояние, при
+              котором сердце начинает хуже перекачивать кровь по сосудам. Из-за
+              этого органы и ткани не получают в достаточном количестве
+              питательные вещества и кислород, а в итоге организму становится
+              все сложнее справляться с повседневными нагрузками
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="section section--notice">
+        <div class="container">
+          <div class="notice__title">
+            <img src="./images/attention.png" alt="attention" />
+            <h2>В приеме лекарств очень важна регулярность</h2>
+          </div>
+          <div class="notice__text">
+            Проследите, чтобы вы или близкие не забывали принимать препараты. Ни
+            в коем случае нельзя самостоятельно «отменять» и «назначать» себе
+            препараты, менять дозировки – все нужно обсуждать со специалистом.
+          </div>
+        </div>
+      </section>
+      <section class="section section--appointment">
+        <div class="container">
+          <div class="appointment__text">
+            Если вы давно не обращались к врачу, запишитесь к нему сейчас, не
+            откладывайте на потом
+          </div>
+          <a href="#" class="button appointment__button">Записаться к врачу</a>
+        </div>
+      </section>
     </div>
     <footer class="footer">
-      <div class="container-fluid">
+      <div class="container">
         <div class="footer__top">
           <div class="item">
             <p>12385</p>
@@ -191,7 +206,7 @@
               Использованные изображения не являются изображениями реальных
               пациентов
             </p>
-            <p>11211039/Val+Sac/Dig/06.24/0</p>
+            <p>11211044/Val+Sac/Dig/06.24/0</p>
           </div>
         </div>
         <div class="footer__bottom">
@@ -217,5 +232,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
