@@ -2,10 +2,15 @@
   padding: torem(50) 0 torem(22);
   background: $footer;
 
+  .container,
   .container-fluid {
     display: flex;
     flex-direction: column;
     gap: torem(72);
+  }
+
+  .container {
+    gap: torem(58);
   }
 
   &__top {
