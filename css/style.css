@@ -436,10 +436,14 @@ h2 {
   padding: 3.125rem 0 1.375rem;
   background: #2e2e2e;
 }
+.footer .container,
 .footer .container-fluid {
   display: flex;
   flex-direction: column;
   gap: 4.5rem;
+}
+.footer .container {
+  gap: 3.625rem;
 }
 .footer__top {
   display: flex;
