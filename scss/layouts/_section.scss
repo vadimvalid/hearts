@@ -952,6 +952,40 @@
         }
       }
     }
+
+    @include md-breakpoint {
+      padding: torem(62) 0 torem(40);
+
+      .container {
+        padding-right: 0;
+      }
+
+      .plain-text {
+        &__item {
+          p {
+            &:not(:last-child) {
+              margin-bottom: torem(20);
+            }
+          }
+
+          &:first-child {
+            margin-bottom: torem(45);
+          }
+
+          &:last-child {
+            > p {
+              margin-bottom: torem(18);
+              font-size: torem(18);
+            }
+          }
+
+          ul {
+            gap: torem(16);
+            padding-left: torem(16);
+          }
+        }
+      }
+    }
   }
 
   &--tabs {
@@ -1059,6 +1093,78 @@
             flex: 1;
             font-size: torem(20);
             opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding-top: torem(60);
+
+      .tabs {
+        &__header {
+          gap: torem(45);
+          margin-bottom: torem(45);
+
+          h2 {
+            font-size: torem(45);
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+
+          [role="tablist"] {
+            width: 100%;
+
+            button {
+              min-height: torem(68);
+              padding: 0 torem(20);
+              font-size: torem(18);
+            }
+          }
+
+          [role="tabpanel"] {
+            gap: torem(20);
+            padding: torem(30) torem(56) torem(16) torem(24);
+            transform: none;
+
+            > * {
+              transform: none;
+            }
+
+            h3 {
+              font-size: torem(22);
+            }
+          }
+
+          &__text {
+            font-size: torem(18);
+
+            h3 {
+              margin-bottom: torem(30);
+            }
+
+            > p {
+              &:not(:last-of-type) {
+                margin-bottom: torem(10);
+              }
+            }
+          }
+
+          &__bottom {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .button {
+              padding: torem(18) torem(22);
+              font-size: torem(18);
+            }
+
+            > p {
+              font-size: torem(18);
+            }
           }
         }
       }

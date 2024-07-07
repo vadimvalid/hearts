@@ -1487,6 +1487,28 @@ h2 {
   font-size: 1.375rem;
   color: #00b922;
 }
+@media screen and (max-width: 991.98px) {
+  .section--plain-text {
+    padding: 3.875rem 0 2.5rem;
+  }
+  .section--plain-text .container {
+    padding-right: 0;
+  }
+  .section--plain-text .plain-text__item p:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+  .section--plain-text .plain-text__item:first-child {
+    margin-bottom: 2.8125rem;
+  }
+  .section--plain-text .plain-text__item:last-child > p {
+    margin-bottom: 1.125rem;
+    font-size: 1.125rem;
+  }
+  .section--plain-text .plain-text__item ul {
+    gap: 1rem;
+    padding-left: 1rem;
+  }
+}
 .section--tabs {
   padding-top: 6.25rem;
 }
@@ -1578,6 +1600,63 @@ h2 {
   flex: 1;
   font-size: 1.25rem;
   opacity: 0.6;
+}
+@media screen and (max-width: 991.98px) {
+  .section--tabs {
+    padding-top: 3.75rem;
+  }
+  .section--tabs .tabs__header {
+    gap: 2.8125rem;
+    margin-bottom: 2.8125rem;
+  }
+  .section--tabs .tabs__header h2 {
+    font-size: 2.8125rem;
+  }
+  .section--tabs .tabs__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .section--tabs .tabs__content [role=tablist] {
+    width: 100%;
+  }
+  .section--tabs .tabs__content [role=tablist] button {
+    min-height: 4.25rem;
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+  }
+  .section--tabs .tabs__content [role=tabpanel] {
+    gap: 1.25rem;
+    padding: 1.875rem 3.5rem 1rem 1.5rem;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .section--tabs .tabs__content [role=tabpanel] > * {
+    -webkit-transform: none;
+    transform: none;
+  }
+  .section--tabs .tabs__content [role=tabpanel] h3 {
+    font-size: 1.375rem;
+  }
+  .section--tabs .tabs__content__text {
+    font-size: 1.125rem;
+  }
+  .section--tabs .tabs__content__text h3 {
+    margin-bottom: 1.875rem;
+  }
+  .section--tabs .tabs__content__text > p:not(:last-of-type) {
+    margin-bottom: 0.625rem;
+  }
+  .section--tabs .tabs__content__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .section--tabs .tabs__content__bottom .button {
+    padding: 1.125rem 1.375rem;
+    font-size: 1.125rem;
+  }
+  .section--tabs .tabs__content__bottom > p {
+    font-size: 1.125rem;
+  }
 }
 
 .button {
