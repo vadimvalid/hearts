@@ -847,6 +847,46 @@ h2 {
   opacity: 0.8;
   z-index: 1;
 }
+.section--dangerous {
+  padding: 8.125rem 0 5.625rem;
+}
+.section--dangerous h2 {
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid #909090;
+  font-size: 3.125rem;
+  line-height: 700;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.section--dangerous .dangerous__items {
+  display: flex;
+  gap: 3.75rem;
+  margin-bottom: 2.25rem;
+}
+.section--dangerous .dangerous__items__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  color: #667683;
+  line-height: 1.5;
+}
+.section--dangerous .dangerous__items__item h3 {
+  font-size: 4rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000;
+}
+.section--dangerous .dangerous__items__item strong {
+  color: #000;
+}
+.section--dangerous .dangerous__items__item:first-child p {
+  max-width: 27.5rem;
+}
+.section--dangerous .dangerous__items__item:last-child p {
+  max-width: 22.5rem;
+}
 
 .button {
   all: unset;
