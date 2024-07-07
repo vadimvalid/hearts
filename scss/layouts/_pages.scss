@@ -296,3 +296,79 @@
     color: $greenDark;
   }
 }
+
+.therapy {
+  .header__nav__menu li a {
+    color: $greenDark;
+  }
+
+  .section {
+    &--hero {
+      background: linear-gradient(
+          176deg,
+          rgba(255, 255, 255, 0.5) 10.56%,
+          rgba(255, 255, 255, 0) 71.76%
+        ),
+        #c8ec1d;
+
+      &__text {
+        position: relative;
+        padding: torem(176) 0 torem(100);
+        color: $greenDark;
+        z-index: 5;
+      }
+
+      &__picture {
+        right: torem(120);
+        height: 70%;
+      }
+
+      h1 {
+        font-size: torem(50);
+        letter-spacing: 0;
+      }
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &--notice {
+      .notice {
+        &__title {
+          flex: 0 1 55%;
+          display: flex;
+          gap: torem(27);
+
+          @include md-breakpoint {
+            gap: torem(20);
+
+            h2 {
+              font-size: clamp(torem(40), 5vw, torem(50));
+            }
+          }
+        }
+
+        &__text {
+          padding-top: torem(10);
+          font-size: torem(24);
+        }
+      }
+    }
+
+    &--subscribe {
+      .subscribe {
+        &__content {
+          background: $blue;
+          color: $white;
+
+          .button {
+            border-color: $white;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
