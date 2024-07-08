@@ -516,5 +516,13 @@
         }
       }
     }
+
+    &--appointment {
+      padding-bottom: torem(76);
+
+      .container {
+        max-width: torem(850);
+      }
+    }
   }
 }
