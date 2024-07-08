@@ -1241,4 +1241,63 @@
       }
     }
   }
+
+  &--links {
+    padding: torem(60) 0 torem(78);
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: torem(40);
+    }
+
+    .links {
+      &__item {
+        a {
+          font-size: torem(40);
+          font-weight: 400;
+          line-height: 1.1;
+          color: $greenDark;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          a {
+            font-weight: 700;
+          }
+        }
+
+        &:nth-child(2) {
+          width: torem(140);
+          height: 3px;
+          background: $green;
+        }
+
+        &:last-child {
+          padding-left: torem(30);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      .container {
+        flex-direction: column;
+        gap: torem(30);
+      }
+
+      .links {
+        &__item {
+          a {
+            font-size: torem(35);
+          }
+
+          &:last-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
