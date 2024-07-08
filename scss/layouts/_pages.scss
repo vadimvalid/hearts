@@ -486,6 +486,14 @@
         padding: torem(170) 0 torem(105);
       }
 
+      &.bottom {
+        background-image: url("../images/hero-3.webp");
+
+        .section--hero__text {
+          padding: torem(136) 0;
+        }
+      }
+
       @media screen and (max-width: 1200px) {
         background-size: cover;
 

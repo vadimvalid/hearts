@@ -628,6 +628,12 @@ h2 {
   max-width: 47.5rem;
   padding: 10.625rem 0 6.5625rem;
 }
+.dieta .section--hero.bottom {
+  background-image: url("../images/hero-3.webp");
+}
+.dieta .section--hero.bottom .section--hero__text {
+  padding: 8.5rem 0;
+}
 @media screen and (max-width: 1200px) {
   .dieta .section--hero {
     background-size: cover;
