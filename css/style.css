@@ -524,6 +524,65 @@ h2 {
   color: #fff;
 }
 
+.orvi .header__nav__menu li a {
+  color: #0e4128;
+}
+.orvi .section--hero {
+  color: #0e4128;
+  background: none;
+  background-image: url("../images/hero-1.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+.orvi .section--hero:before {
+  left: 0;
+  right: auto;
+  width: 65%;
+  height: 100%;
+  -webkit-transform: none;
+  transform: none;
+  background-image: url("../images/orvi-1.png");
+  background-size: cover;
+  background-position: left top;
+}
+.orvi .section--hero:after {
+  display: none;
+}
+.orvi .section--hero h1 {
+  font-size: 3.125rem;
+}
+.orvi .section--hero__text {
+  padding: 10.625rem 0 8.4375rem;
+}
+@media screen and (max-width: 1200px) {
+  .orvi .section--hero {
+    background-size: cover;
+  }
+  .orvi .section--hero:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .orvi .section--hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.125rem);
+  }
+}
+.orvi .section--subscribe {
+  padding: 3.75rem 0;
+}
+.orvi .section--subscribe .subscribe__content {
+  background: #2bacee;
+  color: #fff;
+}
+.orvi .section--subscribe .subscribe__content .button {
+  border-color: #fff;
+  color: #fff;
+}
+.orvi .section--appointment .container {
+  max-width: 51.25rem;
+}
+
 .footer {
   padding: 3.125rem 0 10rem;
   background: #2e2e2e;
@@ -1656,6 +1715,65 @@ h2 {
   }
   .section--tabs .tabs__content__bottom > p {
     font-size: 1.125rem;
+  }
+}
+.section--orvi-text {
+  padding: 6.5625rem 0 2rem;
+  background: #f2f2f2;
+}
+.section--orvi-text .container {
+  display: flex;
+  gap: 4.375rem;
+}
+.section--orvi-text .orvi-text__title {
+  flex: 1;
+  display: flex;
+}
+.section--orvi-text .orvi-text__title h2 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.section--orvi-text .orvi-text__title picture {
+  -webkit-transform: translateX(-48px) translateY(-38px) scale(1.3, 1);
+  transform: translateX(-48px) translateY(-38px) scale(1.3, 1);
+}
+.section--orvi-text .orvi-text__text {
+  flex: 0 1 52%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+  padding-top: 0.625rem;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 991.98px) {
+  .section--orvi-text {
+    padding-top: 3.875rem;
+  }
+  .section--orvi-text .container {
+    flex-direction: column;
+  }
+  .section--orvi-text .orvi-text__title {
+    position: relative;
+  }
+  .section--orvi-text .orvi-text__title h2 {
+    position: relative;
+    font-size: 2.8125rem;
+    z-index: 1;
+  }
+  .section--orvi-text .orvi-text__title picture {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+  .section--orvi-text .orvi-text__text {
+    position: relative;
+    flex: 1;
+    padding-top: 0;
+    font-size: 1.125rem;
+    z-index: 1;
   }
 }
 
