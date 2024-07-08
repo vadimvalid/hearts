@@ -2080,3 +2080,55 @@ input:checked + .slider:before {
   transform: translateX(26px);
   background-color: #fff;
 }
+
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 31.25rem;
+  margin: 0;
+  padding: 3.5625rem 3.25rem;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+.dialog .btn {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  height: 4.375rem;
+  padding: 0.75rem 2.375rem 0.75rem 1.375rem;
+  border-radius: 50px;
+  background: #fb4e4e;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  color: #fff;
+  cursor: pointer;
+}
+.dialog .btn:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.dialog .btn:last-of-type {
+  background: #176095;
+}
+.dialog::-webkit-backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 767.98px) {
+  .dialog {
+    max-width: 90%;
+    padding: 2.5rem 1.5rem;
+  }
+}

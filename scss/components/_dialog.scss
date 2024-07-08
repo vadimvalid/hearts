@@ -1,0 +1,50 @@
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: torem(500);
+  margin: 0;
+  padding: torem(57) torem(52);
+  border: none;
+  border-radius: $borderRadius;
+  background: $white;
+  box-shadow: $boxShadow;
+  z-index: 1000;
+
+  .btn {
+    all: unset;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: torem(20);
+    width: 100%;
+    height: torem(70);
+    padding: torem(12) torem(38) torem(12) torem(22);
+    border-radius: 50px;
+    background: #fb4e4e;
+    font-size: torem(14);
+    font-weight: 700;
+    line-height: normal;
+    color: $white;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: torem(20);
+    }
+
+    &:last-of-type {
+      background: #176095;
+    }
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  @include sm-breakpoint {
+    max-width: 90%;
+    padding: torem(40) torem(24);
+  }
+}
