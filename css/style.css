@@ -586,6 +586,61 @@ h2 {
   max-width: 51.25rem;
 }
 
+.dieta .section--hero {
+  background: none;
+  background-image: url("../images/hero-2.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+}
+.dieta .section--hero:before {
+  left: 0;
+  right: auto;
+  width: 95%;
+  height: 100%;
+  -webkit-transform: none;
+  transform: none;
+  background-image: url("../images/orvi-2.png");
+  background-size: cover;
+  background-position: left top;
+}
+.dieta .section--hero:after {
+  display: none;
+}
+.dieta .section--hero h1 {
+  margin-bottom: 1.25rem;
+  font-size: 3.125rem;
+}
+.dieta .section--hero__text {
+  gap: 1.25rem;
+  max-width: 47.5rem;
+  padding: 10.625rem 0 6.5625rem;
+}
+@media screen and (max-width: 1200px) {
+  .dieta .section--hero {
+    background-size: cover;
+  }
+  .dieta .section--hero:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .dieta .section--hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.125rem);
+  }
+}
+.dieta .section--subscribe {
+  padding: 3.75rem 0;
+}
+.dieta .section--subscribe .subscribe__content {
+  background: #2bacee;
+  color: #fff;
+}
+.dieta .section--subscribe .subscribe__content .button {
+  border-color: #fff;
+  color: #fff;
+}
+
 .footer {
   padding: 3.125rem 0 10rem;
   background: #2e2e2e;
