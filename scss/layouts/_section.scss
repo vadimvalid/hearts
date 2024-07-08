@@ -112,7 +112,7 @@
 
   &--video {
     padding: torem(112) 0;
-    background: #f2f2f2;
+    background: $greyBg;
 
     .container {
       display: flex;
@@ -284,7 +284,7 @@
           }
 
           &:hover {
-            background: #f2f2f2;
+            background: $greyBg;
 
             .simptoms__items__item__text {
               justify-content: flex-start;
@@ -587,7 +587,7 @@
 
     details {
       padding: torem(31) torem(30) torem(31) torem(21);
-      border-radius: 20px;
+      border-radius: $borderRadius;
       background: linear-gradient(
           270deg,
           rgba(255, 255, 255, 0.6) 0%,
@@ -727,7 +727,7 @@
           flex-direction: column;
           gap: torem(20);
           padding: torem(21) torem(20);
-          border-radius: 20px;
+          border-radius: $borderRadius;
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
           background-color: $white;
           font-size: torem(20);
@@ -815,7 +815,7 @@
         justify-content: space-between;
         gap: torem(18);
         padding: torem(26) torem(45) torem(27) torem(37);
-        border-radius: 20px;
+        border-radius: $borderRadius;
         background: linear-gradient(
             270deg,
             rgba(255, 255, 255, 0.6) 0%,
@@ -906,7 +906,7 @@
 
   &--plain-text {
     padding: torem(81) 0 torem(48);
-    background: #f2f2f2;
+    background: $greyBg;
     font-size: torem(20);
 
     .container {
@@ -1019,7 +1019,7 @@
             all: unset;
             min-height: torem(72);
             padding: 0 torem(22);
-            background: #f2f2f2;
+            background: $greyBg;
             border-radius: 4px;
             font-size: torem(20);
             font-weight: 400;
@@ -1040,7 +1040,7 @@
           flex-direction: column;
           gap: torem(30);
           padding: torem(35) torem(70) torem(18) torem(28);
-          border-radius: 20px;
+          border-radius: $borderRadius;
           background: $white;
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
           transform: scale(1, 1.1) translate(-5px, 20px);
@@ -1165,6 +1165,232 @@
             > p {
               font-size: torem(18);
             }
+          }
+        }
+      }
+    }
+  }
+
+  &--orvi-text {
+    padding: torem(105) 0 torem(32);
+    background: $greyBg;
+
+    .container {
+      display: flex;
+      gap: torem(70);
+    }
+
+    .orvi-text {
+      &__title {
+        flex: 1;
+        display: flex;
+
+        h2 {
+          font-size: torem(50);
+          font-weight: 400;
+          line-height: 1.1;
+        }
+
+        picture {
+          transform: translateX(-48px) translateY(-38px) scale(1.3, 1);
+        }
+      }
+
+      &__text {
+        flex: 0 1 52%;
+        display: flex;
+        flex-direction: column;
+        gap: torem(25);
+        padding-top: torem(10);
+        font-size: torem(20);
+      }
+    }
+
+    @include md-breakpoint {
+      padding-top: torem(62);
+
+      .container {
+        flex-direction: column;
+      }
+
+      .orvi-text {
+        &__title {
+          position: relative;
+
+          h2 {
+            position: relative;
+            font-size: torem(45);
+            z-index: 1;
+          }
+
+          picture {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: none;
+          }
+        }
+
+        &__text {
+          position: relative;
+          flex: 1;
+          padding-top: 0;
+          font-size: torem(18);
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &--links {
+    padding: torem(60) 0 torem(78);
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: torem(40);
+    }
+
+    .links {
+      &__item {
+        a {
+          font-size: torem(40);
+          font-weight: 400;
+          line-height: 1.1;
+          color: $greenDark;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          a {
+            font-weight: 700;
+          }
+        }
+
+        &:nth-child(2) {
+          width: torem(140);
+          height: 3px;
+          background: $green;
+        }
+
+        &:last-child {
+          padding-left: torem(30);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      .container {
+        flex-direction: column;
+        gap: torem(30);
+      }
+
+      .links {
+        &__item {
+          a {
+            font-size: torem(35);
+          }
+
+          &:last-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--cards {
+    padding-bottom: torem(56);
+
+    .cards {
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: torem(67) torem(42);
+        margin-bottom: torem(62);
+
+        &__item {
+          flex: 0 1 calc(50% - torem(21));
+          display: flex;
+          align-items: center;
+          gap: torem(54);
+          padding: torem(40) torem(30) torem(38) torem(73);
+          border-radius: $borderRadius;
+          background: $white;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+          font-size: torem(20);
+
+          &:nth-child(3) {
+            flex: 0 1 100%;
+            padding: torem(72) torem(40) torem(78) torem(86);
+          }
+        }
+      }
+
+      &__notice {
+        display: flex;
+        align-items: center;
+        gap: torem(30);
+        padding: 0 torem(78);
+        font-size: torem(20);
+
+        img {
+          width: torem(110);
+          height: torem(110);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      .cards {
+        &__items {
+          flex-direction: column;
+          gap: torem(25);
+          margin-bottom: torem(50);
+
+          &__item {
+            flex: 0 1 100%;
+            gap: torem(40);
+            padding: torem(40) torem(30) torem(38) torem(40);
+            font-size: torem(18);
+
+            &:nth-child(3) {
+              padding: torem(40) torem(30) torem(38) torem(40);
+            }
+
+            > img {
+              width: torem(88);
+              height: torem(88);
+              object-fit: contain;
+            }
+
+            > p {
+              flex: 1;
+            }
+          }
+        }
+
+        &__notice {
+          gap: torem(20);
+          padding: 0;
+          font-size: torem(18);
+
+          img {
+            width: torem(88);
+            height: torem(88);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .cards {
+        &__items {
+          &__item {
+            flex-direction: column;
+            align-items: center;
           }
         }
       }
