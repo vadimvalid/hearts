@@ -1530,4 +1530,240 @@
       }
     }
   }
+
+  &--recommendation {
+    padding: torem(122) 0 torem(70);
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      font-size: torem(24);
+
+      h2 {
+        margin-bottom: torem(54);
+        font-size: torem(50);
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+
+      p {
+        max-width: torem(815);
+        &:not(:last-of-type) {
+          margin-bottom: torem(20);
+        }
+      }
+    }
+
+    &.big {
+      .container {
+        p {
+          max-width: none;
+
+          span {
+            font-weight: 700;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(60) 0;
+
+      .container {
+        font-size: torem(20);
+
+        h2 {
+          margin-bottom: torem(40);
+          font-size: clamp(toRem(32), 5vw, toRem(50));
+        }
+      }
+    }
+  }
+
+  &--list {
+    padding-bottom: torem(96);
+
+    .container {
+      display: flex;
+      gap: torem(45);
+
+      > p {
+        margin-bottom: torem(60);
+        font-size: torem(26);
+      }
+    }
+
+    .list {
+      &__items {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: torem(30);
+        font-size: torem(20);
+
+        &__item {
+          position: relative;
+          padding-left: torem(18);
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: torem(3);
+            height: calc(100% + 10px);
+            border-radius: 2px;
+            background: #96df1e;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      .container {
+        flex-direction: column;
+        gap: torem(25);
+      }
+    }
+  }
+
+  &--text-icon {
+    padding: torem(28) 0 torem(60);
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: torem(53);
+    }
+
+    .text-icon {
+      &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: torem(25);
+
+        h2 {
+          font-size: torem(50);
+          font-weight: 400;
+          line-height: 1.1;
+        }
+      }
+
+      &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: torem(62);
+        background: #f2f2f2;
+        border-radius: 50%;
+      }
+    }
+
+    @include md-breakpoint {
+      .container {
+        flex-direction: column-reverse;
+        gap: torem(40);
+      }
+
+      .text-icon {
+        &__content {
+          gap: torem(20);
+          font-size: torem(20);
+
+          h2 {
+            font-size: torem(45);
+          }
+        }
+
+        &__icon {
+          padding: torem(42);
+        }
+      }
+    }
+  }
+
+  &--full-cards {
+    padding: torem(100) 0 torem(106);
+    background: #f2f2f2;
+
+    h2 {
+      margin-bottom: torem(68);
+      padding-top: torem(30);
+      font-size: torem(50);
+      line-height: 1.1;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .full-cards {
+      &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: torem(38) torem(46);
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          gap: torem(44);
+          height: torem(300);
+          padding: torem(30);
+          background: $white;
+          border-radius: $borderRadius;
+          box-shadow: $boxShadow;
+          font-size: torem(20);
+          text-align: center;
+
+          > img {
+            margin: torem(50) auto torem(18);
+          }
+
+          &:first-child {
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            font-size: torem(24);
+          }
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      padding: torem(62) 0;
+
+      h2 {
+        margin-bottom: torem(45);
+        padding-top: torem(0);
+        font-size: torem(45);
+      }
+
+      .full-cards {
+        &__items {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: torem(25);
+
+          &__item {
+            gap: torem(36);
+            height: auto;
+            padding: torem(20);
+            font-size: torem(18);
+
+            > img {
+              margin: torem(50) auto torem(18);
+            }
+
+            &:first-child {
+              font-size: torem(20);
+            }
+          }
+        }
+      }
+    }
+  }
 }

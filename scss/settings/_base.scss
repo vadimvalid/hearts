@@ -81,3 +81,15 @@ h5 {
 h2 {
   color: $greenDark;
 }
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pb-5 {
+  padding-bottom: torem(5) !important;
+}
+
+.mb-48 {
+  margin-bottom: torem(48) !important;
+}
