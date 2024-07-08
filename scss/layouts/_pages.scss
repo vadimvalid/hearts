@@ -442,6 +442,8 @@
     }
 
     &--appointment {
+      padding-bottom: torem(45);
+
       .container {
         max-width: torem(820);
       }

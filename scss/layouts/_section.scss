@@ -587,7 +587,7 @@
 
     details {
       padding: torem(31) torem(30) torem(31) torem(21);
-      border-radius: 20px;
+      border-radius: $borderRadius;
       background: linear-gradient(
           270deg,
           rgba(255, 255, 255, 0.6) 0%,
@@ -727,7 +727,7 @@
           flex-direction: column;
           gap: torem(20);
           padding: torem(21) torem(20);
-          border-radius: 20px;
+          border-radius: $borderRadius;
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
           background-color: $white;
           font-size: torem(20);
@@ -815,7 +815,7 @@
         justify-content: space-between;
         gap: torem(18);
         padding: torem(26) torem(45) torem(27) torem(37);
-        border-radius: 20px;
+        border-radius: $borderRadius;
         background: linear-gradient(
             270deg,
             rgba(255, 255, 255, 0.6) 0%,
@@ -1040,7 +1040,7 @@
           flex-direction: column;
           gap: torem(30);
           padding: torem(35) torem(70) torem(18) torem(28);
-          border-radius: 20px;
+          border-radius: $borderRadius;
           background: $white;
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
           transform: scale(1, 1.1) translate(-5px, 20px);
@@ -1295,6 +1295,102 @@
 
           &:last-child {
             padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--cards {
+    padding-bottom: torem(56);
+
+    .cards {
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: torem(67) torem(42);
+        margin-bottom: torem(62);
+
+        &__item {
+          flex: 0 1 calc(50% - torem(21));
+          display: flex;
+          align-items: center;
+          gap: torem(54);
+          padding: torem(40) torem(30) torem(38) torem(73);
+          border-radius: $borderRadius;
+          background: $white;
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+          font-size: torem(20);
+
+          &:nth-child(3) {
+            flex: 0 1 100%;
+            padding: torem(72) torem(40) torem(78) torem(86);
+          }
+        }
+      }
+
+      &__notice {
+        display: flex;
+        align-items: center;
+        gap: torem(30);
+        padding: 0 torem(78);
+        font-size: torem(20);
+
+        img {
+          width: torem(110);
+          height: torem(110);
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      .cards {
+        &__items {
+          flex-direction: column;
+          gap: torem(25);
+          margin-bottom: torem(50);
+
+          &__item {
+            flex: 0 1 100%;
+            gap: torem(40);
+            padding: torem(40) torem(30) torem(38) torem(40);
+            font-size: torem(18);
+
+            &:nth-child(3) {
+              padding: torem(40) torem(30) torem(38) torem(40);
+            }
+
+            > img {
+              width: torem(88);
+              height: torem(88);
+              object-fit: contain;
+            }
+
+            > p {
+              flex: 1;
+            }
+          }
+        }
+
+        &__notice {
+          gap: torem(20);
+          padding: 0;
+          font-size: torem(18);
+
+          img {
+            width: torem(88);
+            height: torem(88);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .cards {
+        &__items {
+          &__item {
+            flex-direction: column;
+            align-items: center;
           }
         }
       }
