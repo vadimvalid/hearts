@@ -217,6 +217,11 @@ h2 {
   margin-bottom: 3rem !important;
 }
 
+sup {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
 .home {
   display: -ms-grid;
   display: grid;
@@ -319,7 +324,7 @@ h2 {
   right: 0;
   bottom: 0;
   width: 70%;
-  height: 70%;
+  height: 60%;
   z-index: 1;
 }
 .home .main__items .item__picture img {
@@ -1015,7 +1020,7 @@ h2 {
   padding: 1.3125rem 2.1875rem 1.25rem 1.4375rem;
   border-radius: 24px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 .section--simptoms .simptoms__items__item__text {
   position: relative;
@@ -1409,7 +1414,7 @@ h2 {
   text-transform: uppercase;
 }
 .section--diary .container p {
-  max-width: 38.125rem;
+  max-width: 50%;
   margin-bottom: 1.3125rem;
   font-size: 1.25rem;
 }
@@ -1676,8 +1681,9 @@ h2 {
 }
 .section--tabs .tabs__content [role=tablist] button {
   all: unset;
+  flex: 1;
   min-height: 4.5rem;
-  padding: 0 1.375rem;
+  padding: 0.25rem 1.375rem;
   background: #f2f2f2;
   border-radius: 4px;
   font-size: 1.25rem;
@@ -1687,6 +1693,7 @@ h2 {
   cursor: pointer;
 }
 .section--tabs .tabs__content [role=tablist] button[aria-selected=true] {
+  flex: auto;
   background: #fff;
   color: #262d3f;
   font-weight: 700;
@@ -1699,12 +1706,8 @@ h2 {
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-  -webkit-transform: scale(1, 1.1) translate(-5px, 20px);
-  transform: scale(1, 1.1) translate(-5px, 20px);
-}
-.section--tabs .tabs__content [role=tabpanel] > * {
-  -webkit-transform: scale(1, 0.9);
-  transform: scale(1, 0.9);
+  -webkit-transform: translate(-5px, 0);
+  transform: translate(-5px, 0);
 }
 .section--tabs .tabs__content [role=tabpanel] h3 {
   font-size: 1.625rem;
