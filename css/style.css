@@ -2140,6 +2140,9 @@ sup {
   margin-bottom: 3.75rem;
   font-size: 1.625rem;
 }
+.section--list .container .text-icon__content > p {
+  font-size: 1.625rem;
+}
 .section--list .list__items {
   flex: 1;
   display: flex;
