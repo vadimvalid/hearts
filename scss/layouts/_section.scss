@@ -1591,6 +1591,12 @@
         margin-bottom: torem(60);
         font-size: torem(26);
       }
+
+      .text-icon__content {
+        > p {
+          font-size: torem(26);
+        }
+      }
     }
 
     .list {
