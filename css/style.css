@@ -486,7 +486,7 @@ sup {
 }
 .xsn .section--notice .notice__text {
   padding-top: 0.625rem;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 .xsn .header__nav__menu li a {
   color: #0e4128;
@@ -530,7 +530,7 @@ sup {
 }
 .therapy .section--notice .notice__text {
   padding-top: 0.625rem;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 .therapy .section--subscribe .subscribe__content {
   background: #2bacee;
@@ -1206,7 +1206,7 @@ sup {
 }
 .section--appointment .appointment__list, .section--appointment .appointment__text {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
   text-align: center;
   color: #0e4128;
@@ -1982,7 +1982,7 @@ sup {
 }
 .section--simple-text p {
   max-width: 59.0625rem;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 .section--cards-new {
   padding-bottom: 4.1875rem;
@@ -2095,7 +2095,7 @@ sup {
 .section--recommendation .container {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 .section--recommendation .container h2 {
   margin-bottom: 3.375rem;
@@ -2138,10 +2138,10 @@ sup {
 }
 .section--list .container > p {
   margin-bottom: 3.75rem;
-  font-size: 1.625rem;
+  font-size: 1.375rem;
 }
 .section--list .container .text-icon__content > p {
-  font-size: 1.625rem;
+  font-size: 1.375rem;
 }
 .section--list .list__items {
   flex: 1;
@@ -2255,7 +2255,7 @@ sup {
   background: transparent;
   border: none;
   box-shadow: none;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 @media screen and (max-width: 991.98px) {
   .section--full-cards {
