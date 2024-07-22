@@ -409,7 +409,7 @@
       &__list,
       &__text {
         position: relative;
-        font-size: torem(24);
+        font-size: torem(22);
         font-weight: 600;
         text-align: center;
         color: $greenDark;
@@ -1400,7 +1400,7 @@
 
     p {
       max-width: torem(945);
-      font-size: torem(24);
+      font-size: torem(22);
     }
   }
 
@@ -1535,7 +1535,7 @@
     .container {
       display: flex;
       flex-direction: column;
-      font-size: torem(24);
+      font-size: torem(22);
 
       h2 {
         margin-bottom: torem(54);
@@ -1589,12 +1589,12 @@
 
       > p {
         margin-bottom: torem(60);
-        font-size: torem(26);
+        font-size: torem(22);
       }
 
       .text-icon__content {
         > p {
-          font-size: torem(26);
+          font-size: torem(22);
         }
       }
     }
@@ -1731,7 +1731,7 @@
             background: transparent;
             border: none;
             box-shadow: none;
-            font-size: torem(24);
+            font-size: torem(22);
           }
         }
       }
