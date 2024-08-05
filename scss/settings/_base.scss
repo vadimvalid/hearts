@@ -80,6 +80,10 @@ h5 {
 
 h2 {
   color: $greenDark;
+
+  sup {
+    vertical-align: text-top;
+  }
 }
 
 .p-0 {
@@ -95,6 +99,6 @@ h2 {
 }
 
 sup {
-  font-size: torem(13);
+  font-size: torem(11);
   font-weight: 500;
 }
