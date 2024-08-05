@@ -1712,6 +1712,7 @@
         &__item {
           display: flex;
           flex-direction: column;
+          justify-content: space-between;
           gap: torem(44);
           height: torem(300);
           padding: torem(30);
@@ -1732,6 +1733,14 @@
             border: none;
             box-shadow: none;
             font-size: torem(22);
+          }
+
+          &.big {
+            > img {
+              width: torem(140);
+              height: torem(140);
+              margin: torem(16) auto 0;
+            }
           }
         }
       }
