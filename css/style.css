@@ -205,6 +205,8 @@ h2 {
   color: #0e4128;
 }
 h2 sup {
+  font-size: 1.875rem;
+  font-weight: 700;
   vertical-align: text-top;
 }
 
